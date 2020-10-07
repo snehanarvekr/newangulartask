@@ -1,0 +1,40 @@
+
+
+
+
+
+
+<div class="col-md-12 col-lg-12">
+    
+    <div class="col-md-4"></div>
+    <div class="col-md-4">
+    <br>
+    <br>
+    <br>
+        <p>Please confirm or edit your contact so that we notify you when you are approved for our Beta</p>
+        <hr>
+
+
+     
+            <div class="form-group">
+                <label class="reglabel" for="Name">Name:</label>
+                <input type="text" class="form-control" [(ngModel)]="FormModel.Name" id="Name"  placeholder="Type Name">
+              </div>
+            <div class="form-group">
+              <label class="reglabel" for="EmailId">Email address:</label>
+              <input type="email" class="form-control"  [(ngModel)]="FormModel.EmailId" id="EmailId" placeholder="Type Email">
+            </div>
+           
+            <div class="form-group">
+                <label class="reglabel" for="PhoneNo">Phone Number:</label>
+                <input type="text" class="form-control" [(ngModel)]="FormModel.PhoneNo" id="PhoneNo" placeholder="Type your Phone Number">
+              </div>
+
+              <hr>
+              <button class="bbtnsign" (click)="Signup()">Sign Up </button>
+           
+         
+    </div>
+    
+</div>
+

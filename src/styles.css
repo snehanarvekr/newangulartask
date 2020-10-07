@@ -1,0 +1,66 @@
+/* You can add global styles to this file, and also import other style files */
+
+/* @font-face {
+    font-family: "SF Compact Display" ;
+    src: url('/assets/font/SF-Compact-Display-Bold.otf') format("opentype");
+   
+
+  } */
+  @font-face {font-family: "SF Compact Display"; 
+    src: url("//db.onlinewebfonts.com/t/34c8d46dfc9b1f9eb1baa2256874b885.eot"); src: url("//db.onlinewebfonts.com/t/34c8d46dfc9b1f9eb1baa2256874b885.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/34c8d46dfc9b1f9eb1baa2256874b885.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/34c8d46dfc9b1f9eb1baa2256874b885.woff") format("woff"), url("//db.onlinewebfonts.com/t/34c8d46dfc9b1f9eb1baa2256874b885.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/34c8d46dfc9b1f9eb1baa2256874b885.svg#SF Compact Display") format("svg"); }
+
+    @font-face {font-family: "SF Compact Display Reg"; src: url("//db.onlinewebfonts.com/t/23c8ec0d7b298e340b59bd32a7e661f3.eot"); src: url("//db.onlinewebfonts.com/t/23c8ec0d7b298e340b59bd32a7e661f3.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/23c8ec0d7b298e340b59bd32a7e661f3.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/23c8ec0d7b298e340b59bd32a7e661f3.woff") format("woff"), url("//db.onlinewebfonts.com/t/23c8ec0d7b298e340b59bd32a7e661f3.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/23c8ec0d7b298e340b59bd32a7e661f3.svg#SF Compact Display") format("svg"); }
+
+.HeadingTag{
+    color:red;
+    font-family: "SF Compact Display" !important ;
+    text-align:center;
+      
+}
+
+h2{
+    font-family: "SF Compact Display" !important ;
+}
+h5{
+    text-align:center;
+}
+.para{
+    font-family: "SF Compact Display Reg" !important ;
+    text-align:center;
+}
+.bbtn { 
+    cursor: pointer; 
+    border: 1px solid #ef4423; 
+    background-color: transparent; 
+    height: 40px; 
+    width: 200px; 
+    color: #ef4423; 
+    font-size: 1em; 
+    margin-left: 40%;
+    /* box-shadow: 0 6px 6px rgba(0, 0, 0, 0.6);  */
+}
+.bbtnsign{
+    cursor: pointer; 
+    border: 1px solid #ef4423; 
+    background-color: transparent; 
+    height: 40px; 
+    width: 153px; 
+    color: #ef4423; 
+    font-size: 1em; 
+    margin-left:30%;
+}
+.form-control{
+  border-radius:0px !important;
+  border: 1px solid black !important;
+}
+.reglabel{
+     font-size: 11px;
+    font-weight: 200;
+    color: #6d6767;
+}
+hr {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border: 0;
+    border-top: 1px solid #cebebe !important;
+}
