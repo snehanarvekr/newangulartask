@@ -11,7 +11,7 @@ import {Employee} from '../../class'
   providers: [NgbModalConfig, NgbModal]
 })
 export class Angular6homeComponent implements OnInit {
-  imageUrl: string ="/assets/images/defaultprofile.jpg";
+  imageUrl: string ="assets/images/defaultprofile.jpg";
   FileToUpload : File = null;
   closeResult = ''; 
   slidervalue:number;
@@ -109,9 +109,15 @@ createemployee(){
   this.formModal.Image=this.imageUrl
   this.formModal.Age = this.slidervalue;
   this.formModal.tag= this.skills
-  console.log(this.formModal)
-  this.empservice.createEmployee(this.formModal).subscribe();
-  this.router.navigate(['UserProfile'])
+  console.log(this.formModal.firstName)
+
+  if(this.formModal.firstName==undefined || this.formModal.LastName==undefined){
+    alert('please enter Name')
+  }else{
+     this.empservice.createEmployee(this.formModal).subscribe();
+     this.router.navigate(['UserProfile'])
+  }
+ 
 }
 
 }

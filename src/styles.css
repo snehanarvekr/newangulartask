@@ -142,7 +142,7 @@ input[type=text], select {
   
   }
   .btn-primary{
-      margin-top:11px !important;
+      margin-top:9px !important;
   }
   .conten{
    text-align: center;
@@ -232,4 +232,7 @@ input[type=text], select {
 width: 100%;
 background: #71aff1 !important;
 color: white;
+}
+.searchbtn{
+    margin-bottom: 7px !important;
 }
