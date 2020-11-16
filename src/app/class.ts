@@ -7,4 +7,24 @@ export class cSinUp{
     redirect_uri:string;
     client_id:string;
     client_secret:string;
+    SizeId:number;
+    SizeName:string;
+    Stock:string;
+    ProductDescription:string;
+    ProductName:string;
+    Price:number;
+    Id:number;
+}
+export class Employee{
+    id:number;
+    Image:string;
+    firstName:string; 
+    LastName:string;
+    Email:string;
+    phoneNo:number;
+    Age:number;
+    StateId:number;
+    CountryId:number;
+    Address:string;
+    tag:Array<any>;
 }
