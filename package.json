@@ -9,7 +9,9 @@
     "lint": "ng lint",
     "e2e": "ng e2e",
     "json:server": "json-server --watch db.json"
-      },
+
+  },
+
   "private": true,
   "dependencies": {
     "@angular/animations": "~10.1.2",
