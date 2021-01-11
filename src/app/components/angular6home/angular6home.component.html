@@ -1,0 +1,210 @@
+
+       <section class="header">
+        <div class="overlay">
+            <div class="row">
+               <div class="navbar navbar-default">
+                  <div class="container-fluid">
+                    <!-- Brand and toggle get grouped for better mobile display -->
+                    <div class="navbar-header">
+                      <!-- <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                      </button> -->
+                        <!-- <div class="navlogo col-lg-3">
+                            <a class="navbar-brand" href="#">Demo </a>
+                        </div> -->
+                      
+                    </div>
+
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                      
+                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                      <div class="navlogo col-lg-3">
+                        <a class="navbar-brand" href="#">Demo </a>
+                    </div>
+                            <div class="col-lg-9">
+                                  <ul class="nav navbar-nav nav-links">
+                                     <li><a href="#">HOME</a></li>
+                                    <li><a href="#">ABOUT US</a></li>
+                                    <li><a href="#">JOBS</a></li>
+                                    <li><a href="#">CLIENTS</a></li>
+                                    <li><a href="#">EMPLOYERS</a></li>
+                                    <li><a href="#">CONTACT US</a></li>
+                                   
+
+                                  </ul>
+                                </div>
+<!--                                 
+                            <div class="col-lg-2 right">
+                                 <ul class="nav navbar-nav navbar-right">
+                                    <li><a href="#"><i class="fa fa-search fa-2x"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-shopping-cart fa-2x"></i></a></li>
+                                     
+                                </ul>
+                            </div> -->
+                          
+                        </div>
+                     
+                        <div class="Internal col-md-12 col-lg-12 col-xs-12">
+                            <P class="Paraangular6">I'm looking for..</P>
+                           <div class="row">
+                            <input type="text" id="fname" class="col-lg-5" name="firstname" placeholder="Enter a Job Description"> &nbsp; &nbsp;
+                            <button type="button" class="btn btn-primary col-lg-1 col-md-1 searchbtn ">Search</button>
+                            </div>
+                         
+                            <div class="row">
+                            <div class="col-lg-4 col-md-4">
+                            <input type="checkbox" value=""><label> &nbsp;&nbsp;Full Time</label> &nbsp;&nbsp;
+                            <input type="checkbox" value=""><label> &nbsp;&nbsp;Part Time / Casual / Freelance</label> 
+                            </div>
+                            <div class="col-lg-2 col-md-2">
+                            <!-- <select class="form-control" id="country" name="country" placeholder="Select Your Location">
+                                <option value="australia" selected>Select Your Location</option>
+                               
+                              </select> -->
+                              </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-2 col-lg-2"></div>
+                                <div class="col-md-1 col-lg-1">
+                            <button type="button" class="btn btn-primary" (click)="open(mymdal)">Register</button>
+                            </div>
+                             </div>
+
+                            </div>
+                     
+
+
+
+                  </div>
+             </div>
+            
+            
+            </div>
+    
+            
+            
+            
+            
+        </div>
+
+
+       
+    </section>
+    <div class="conten">
+        <span class="subcap">We're leaders in</span>
+        <br>
+        <span class="subcap2">Creative Digital Recruitment</span>
+        <br>
+       <hr class="new5">
+       <p class="dummypara">Based in Surry Hills, the creative hub of Sydney we are surrounded by creativity <br>
+        and that reflected on the type of jobs we recruit for.</p>
+        <br>
+        <button class="bbtprimary">FIND OUT MORE ABOUT US</button>
+    </div>
+
+
+
+    <!-- Footer -->
+<footer class="page-footer">
+
+  
+  
+      <!-- Grid row -->
+      <div class="row justify-content-center">
+        <div class="conten">
+            <span class="footercapion">Subscribe to our job seeker Mailing List</span>
+            <br>
+            <input type="text" id="fname" class="col-lg-12 email" name="firstname" placeholder="Enter Your Email Address">
+        </div>
+       
+      </div>
+    
+  
+  </footer>
+  <!-- Footer -->
+   
+  <ng-template #mymdal let-modal>
+  <div class="modal-header">
+    <h4 class="modal-title" id="modal-basic-title">Register</h4>
+    <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+   
+   <div class="row">
+    <div class="col-md-3">
+     <img [src]="imageUrl"  style="width:120px; height:120px">
+      <input type="file" #Image accept="image/*" (change)="handleFileInput($event.target.files)">
+    </div>
+
+    <div class="col-md-9">
+      <div class="row">
+        <input class="form-control col-md-6" type="text" placeholder="FirstName" maxlength="20"
+        [(ngModel)]="formModal.firstName"
+        (keypress)="checkNum($event)" >
+        <input class="form-control col-md-6" type="text" placeholder="LastName" 
+        [(ngModel)]="formModal.LastName"
+        (keypress)="checkNum($event)">
+      </div>
+     
+      <div class="row">
+        <input class="form-control " type="text" placeholder="Email"
+        [(ngModel)]="formModal.Email">
+       
+      </div>
+      <div class="row">
+        <input class="form-control " type="number" placeholder="Phone No" maxlength="10"
+        [(ngModel)]="formModal.phoneNo"
+        >
+       
+      </div>
+      
+     Age:   <input type="range" class="range-field" (change)="slidercheck($event.target.value)" min="0" max="100" />
+     {{slidervalue}}
+
+      <div class="row">
+      <select class="form-control" [(ngModel)]="formModal.StateId" id="StateId">
+        <option>State</option>
+        <option value=1>Maharastra</option>
+      </select>
+      </div>
+     <br>
+      <div class="row">
+        <select class="form-control" [(ngModel)]="formModal.CountryId" id="CountryId">
+          <option>Country</option>
+          <option value=1>India</option>
+        </select>
+        </div>
+
+        <div class="row">
+          <input class="form-control " type="text" placeholder="Address"
+          [(ngModel)]="formModal.Address" id="Address">
+         
+        </div>
+        <div class="row">
+          <input class="form-control " type="text" placeholder="Tag" [(ngModel)]="newSkill" (keyup.enter)="addSkill()">
+          <li *ngFor="let skill of skills ; let i=index"  class="{'fadeOut' : skill.done}">
+            <button type="button" class="close" aria-label="Close" (click)="deleteSkill(i)">
+              <span aria-hidden="true">&times;</span>
+            </button>
+            <span>{{skill.title}}</span>
+          </li>
+        </div>
+
+
+    </div>
+
+
+   </div>
+
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-outline-dark btn-danger btn-dangers" (click)="modal.dismiss('Cross click')">Cancle</button>
+    <button type="button" class="btn btn-outline-dark btn-primary" (click)="createemployee()">Save</button>
+  </div>
+</ng-template>

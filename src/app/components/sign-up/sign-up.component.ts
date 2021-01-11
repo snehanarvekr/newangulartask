@@ -15,18 +15,17 @@ export class SignUpComponent implements OnInit {
   constructor( private router:Router, private abc:ServiceService,  private route: ActivatedRoute
     ) { }
   FormModel:cSinUp;
+  ProductList:Array<any>=[];
   ngOnInit(): void {
     this.linkedInToken = this.route.snapshot.queryParams["code"];
     console.log(this.linkedInToken)
     this.FormModel= new cSinUp()
   //  this.socialSignIn('linkedin')
-      this.FormModel.Name="Sneha Narvekar"
-      this.FormModel.EmailId= "narvekarsneha2888@gmail.com"
    
-    this.FormModel.client_id = '78oi7jcjeet0ix'
-    this.FormModel.client_secret='IYEcofOuB9jsJtUs'
+   
+    
    // this.FormModel.redirect_uri = 'http://localhost:4200/Signup';
-   // this.FormModel.code=  this.linkedInToken
+   this.FormModel.code=  this.linkedInToken
 
     console.log(this.FormModel);
       this.abc.GetProfile(this.FormModel).subscribe(data=>{
@@ -56,16 +55,28 @@ export class SignUpComponent implements OnInit {
 
   Signup(){
      console.log(this.FormModel)
-     this.abc.addPerson(this.FormModel).subscribe(data=>{
-            console.log(data)
-     })
-  
-   if(this.FormModel.Name!=undefined && this.FormModel.EmailId!=undefined && this.FormModel.PhoneNo!=undefined){
-    this.router.navigate(['AccessCopy']);
-
-   }else{
-     alert('All Fields are required')
-   }
+    //  this.abc.addPerson(this.FormModel).subscribe(data=>{
+    //         console.log(data)
+    //  })
+       if(this.FormModel.Id>0){
+        this.FormModel= new cSinUp()
+       }else{
+      
+       this.FormModel.Id = this.ProductList.length + 1;
+       
+       this.ProductList.push(this.FormModel)
+       console.log(this.ProductList)
+       this.FormModel= new cSinUp()
+       }
+   
+     
     
+  }
+  DeleteRecord(index){
+    this.ProductList.splice(index, 1);
+  }
+  
+  EditRecord(obj){
+     this.FormModel = obj
   }
 }

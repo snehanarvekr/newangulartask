@@ -49,10 +49,10 @@ h5{
     font-size: 1em; 
     margin-left:30%;
 }
-.form-control{
+/* .form-control{
   border-radius:0px !important;
   border: 1px solid black !important;
-}
+} */
 .reglabel{
      font-size: 11px;
     font-weight: 200;
@@ -63,4 +63,176 @@ hr {
     margin-bottom: 20px;
     border: 0;
     border-top: 1px solid #cebebe !important;
+}
+
+
+.header{
+    background: url("http://a.top4top.net/p_397znzmu1.png") center center fixed;
+    color: #FFF;
+    height: 80vh;
+    position: relative;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    -msn-background-size: cover;
+}
+.header .overlay{
+    background: rgba(0, 0, 0, 0.58);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0; 
+}
+
+
+.header .navbar-default {
+	background-color:transparent !important;
+	border-color:transparent;
+	background-image:none;
+	box-shadow:none;	
+}
+.header .navbar-default .navbar-brand{
+    font-size: 30px;
+    font-weight: bold;
+    color: #FFF;
+}
+
+.header .navbar-default .navbar-nav>li>a {
+   font-size:20px; 
+   color:#fff; 
+    border-bottom: 1px solid transparent
+}
+.header .navbar-default .navbar-nav>li:hover a{
+    color: #333;
+     border-bottom: 1px solid #FFF
+}
+
+
+.header .navbar-toggle {
+      margin:10px 0; 
+      background:#36C; 
+      color:#FFF;
+}
+.navbar-nav {
+    float: right !important;
+    margin: 0;
+}
+.navbar-collapse{
+  /* position: fixed; */
+    width: 100% !important; 
+}
+.Internal{
+    text-align: left;
+    margin-top: 5%;
+    margin-left: 10%;
+}
+.Paraangular6{
+    font-size:25px;
+}
+ 
+input[type=text], select {
+    
+    padding: 9px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  
+  }
+  .btn-primary{
+      margin-top:9px !important;
+  }
+  .conten{
+   text-align: center;
+   margin-top: 30px;
+
+  }
+  .subcap{
+      font-size:20px;
+      color:#504c4c;
+  }
+
+  .subcap2{
+    font-size:25px;
+    font-weight: 100;
+    color:#504c4c;
+  }
+  .new5{
+    border: 4px solid #4ea2ea;
+    width:60px;
+  }
+  .dummypara{
+    font-size:15px;
+    color:#504c4c;
+  }
+  .btn-primary-outline {
+    background-color: transparent;
+    border-color: black;
+  }
+  .bbtprimary { 
+    cursor: pointer; 
+    border: 1px solid #4ea2ea; 
+    background-color: transparent; 
+    height: 40px; 
+    width: 203px; 
+    color: #4ea2ea; 
+    font-size: 1em; 
+    
+    /* box-shadow: 0 6px 6px rgba(0, 0, 0, 0.6);  */
+}
+.page-footer{
+   padding: 70px;
+   background: #000000d1;
+   margin-top:24px;
+}
+.footercapion{
+    color:white;
+
+}
+.email{
+    background: transparent;
+   
+}
+.navbar-nav {
+    display: flex;
+    flex-direction: row !important;
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style: none;
+}
+.modal-open .modal {
+    overflow-x: hidden;
+    overflow-y: auto;
+    opacity: 1 !important;
+    margin-top: 4%;
+}
+.modal-header{
+    background: #4483f5 ;
+    color: white;
+    margin-top: 23%;
+}
+.modal-content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 120% !important;
+    pointer-events: auto;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid rgba(0,0,0,.2);
+    border-radius: .3rem;
+    outline: 0;
+}
+.btn-dangers{
+  margin-top:5px !important;
+}
+.profilenav{
+width: 100%;
+background: #71aff1 !important;
+color: white;
+}
+.searchbtn{
+    margin-bottom: 7px !important;
 }
