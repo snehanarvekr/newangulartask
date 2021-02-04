@@ -1,9 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import {NgbModal, ModalDismissReasons,NgbModalConfig} from '@ng-bootstrap/ng-bootstrap';
-import { from } from 'rxjs';
 import { ServiceService } from 'src/app/service.service';
 import {Employee} from '../../class'
+//import  db  from  '../../../assets/db.json';
+declare var require: any
 @Component({
   selector: 'app-angular6home',
   templateUrl: './angular6home.component.html',
@@ -18,6 +19,7 @@ export class Angular6homeComponent implements OnInit {
   skills = [];
   newSkill='';
   formModal:Employee;
+  //products: any = (data as any).default;
   constructor(private modalService: NgbModal,config: NgbModalConfig, private empservice:ServiceService ,private router:Router) {
     config.backdrop = 'static';
     config.keyboard = false;
@@ -92,6 +94,26 @@ else
 }
 
 getAllEmployee(){
+  // var jsonServer = require('json-server')
+
+  // var server = jsonServer.create()
+  // var router = jsonServer.router('db.json')
+  
+  // router.render = function (req, res) {
+  //   var data = res.locals.data
+  //   if (res.statusCode >= 400) {
+  //     data = {
+  //       code: res.statusCode,
+  //       message: 'Error'
+  //     }
+  //   }
+  //   res.jsonp(data)
+  // }
+  
+  // server.use(jsonServer.defaults)
+  // server.use(router)
+  
+  // server.listen(3000)
   this.empservice.GetAllEmployees().subscribe(data=>{
     console.log(data);
     let last= data[data.length-1];
