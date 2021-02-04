@@ -1,0 +1,55 @@
+ <div class="col-md-12">
+  <div class="row">
+      <div class="col-md-4">
+       <h4>Section1</h4>
+       <div class="card" *ngFor="let obj of this.commentData" (click)="getData(obj)">
+           <div class="title">{{obj.title}}</div>
+           <div class="body">
+               <table>
+               <tr>
+                   <th style="width: 50%;">Comment</th>
+                   <th style="width: 50%;">Status</th>
+                </tr>
+                <tr >
+                  <td></td>
+
+                </tr>
+
+               </table>
+               </div>
+       </div>
+      </div>
+      <div class="col-md-4">
+        <h4>Section2</h4>
+        <div class="secion2 body" >
+          <h4>{{this.section2Data.title}}</h4>
+          <div class="body">
+              {{this.section2Data.body}}
+            <label>comments</label>
+            <select [(ngModel)]="this.section2Data.commentType">
+              <option>select</option>
+              <option>New comments</option>
+              <option>Old Comment</option>
+            </select>
+            <div class="input">
+             Default name <input type="text" placeholder="Enter Your Comment Here" [(ngModel)]="this.commentDetail.comment">
+             <button (click)="AddComment()">Add Comment</button>
+             <table>
+               <tr *ngFor="let obj of this.Newcomments">
+                 <td>{{obj.comment}}</td>
+                </tr>
+
+              </table>
+              </div>
+          </div>
+
+        </div>
+          
+    </div>
+     <div class="col-md-4">
+        <h4>Section3</h4>
+     </div>
+  </div>
+
+
+    </div>
