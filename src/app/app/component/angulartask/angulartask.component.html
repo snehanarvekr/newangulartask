@@ -1,27 +1,30 @@
  <div class="col-md-12">
   <div class="row">
-      <div class="col-md-4">
+      <div class="col-md-4 card">
        <h4>Section1</h4>
-       <div class="card" *ngFor="let obj of this.commentData" (click)="getData(obj)">
+       <div class="card" *ngFor="let obj of this.commentData | slice:pageStart:10" (click)="getData(obj)">
            <div class="title">{{obj.title}}</div>
            <div class="body">
-               <table>
+               <table class="table">
                <tr>
-                   <th style="width: 50%;">Comment</th>
-                   <th style="width: 50%;">Status</th>
+                   <th style="width: 50% !important">Comment</th>
+                   <th style="width: 50% !important">Status</th>
                 </tr>
-                <tr >
-                  <td></td>
-
+                <tr *ngFor="let childobj of obj.Array ">
+                  <td style="width: 50% !important">{{childobj.comment}}</td>
+                  <td style="width: 50% !important">{{childobj.status}}</td>
+                  <td><input type="checkbox"  (change)="selectstatus(childobj,$event)" ></td>
                 </tr>
 
                </table>
                </div>
        </div>
+       <!-- <button *ngIf="pageStart >= 10" class="col-md-2" (click)="prevData()">Previous</button>
+       <button *ngIf="pageStart < this.commentData.length" class="col-md-2" (click)="nextData()">Next</button> -->
       </div>
-      <div class="col-md-4">
+      <div class="col-md-4 card">
         <h4>Section2</h4>
-        <div class="secion2 body" >
+        <div class="secion2 body " >
           <h4>{{this.section2Data.title}}</h4>
           <div class="body">
               {{this.section2Data.body}}
@@ -46,8 +49,25 @@
         </div>
           
     </div>
-     <div class="col-md-4">
+     <div class="col-md-4 card">
         <h4>Section3</h4>
+        <div class="card" *ngFor="let obj of this.section3FinalArray" >
+          <div class="title">{{obj.title}}</div>
+          <div class="body">
+              <table class="table">
+              <tr>
+                  <th style="width: 50% !important">Comment</th>
+                  <th style="width: 50% !important">Status</th>
+               </tr>
+               <tr *ngFor="let obj2 of obj.Array ">
+                 <td style="width: 50% !important">{{obj2.comment}}</td>
+                 <td style="width: 50% !important">{{obj2.status}}</td>
+                 <td></td>
+               </tr>
+
+              </table>
+              </div>
+      </div>
      </div>
   </div>
 
