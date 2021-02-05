@@ -12,4 +12,5 @@ export class commentdetail{
     id:number;
     comment:string;
     status:string;
+    title:string;
 }

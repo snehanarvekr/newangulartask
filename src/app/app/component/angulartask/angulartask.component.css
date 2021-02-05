@@ -5,3 +5,6 @@
 .body{
     border: 2 px solid black;
 }
+.table{
+    width: 100% !important;
+}
